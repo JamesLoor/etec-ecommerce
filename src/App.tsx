@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import RouterMain from './routes/RouterMain'
 
 const AppStyled = styled.div`
   h1 {
@@ -9,7 +10,7 @@ const AppStyled = styled.div`
 const App = () => {
   return (
     <AppStyled>
-      <h1>Ecommerce Etec</h1>
+      <RouterMain />
     </AppStyled>
   )
 }
