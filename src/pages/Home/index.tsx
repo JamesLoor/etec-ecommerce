@@ -11,9 +11,11 @@ const HomeStyled = styled.div`
     gap: 10px;
     h1 {
       text-transform: capitalize;
+      color: ${({ theme }) => theme.colors.secundary};
     }
     p {
       margin-bottom: 10px;
+      color: ${({ theme }) => theme.colors.secundary};
     }
     @media (min-width: 768px) {
       h1 {

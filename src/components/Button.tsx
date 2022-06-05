@@ -4,10 +4,10 @@ import styled from 'styled-components'
 const ButtonStyled = styled.button`
   width: min-content;
   background-color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.secundary};
   outline: none;
   border: none;
   cursor: pointer;
-  color: ${({ theme }) => theme.color.secundary};
   padding: 8px 30px;
   border-radius: 30px;
   font-weight: 500;
