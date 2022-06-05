@@ -7,6 +7,9 @@ export const defaultTheme = {
   },
   positions: {
     header: 1000,
+    menuMobile: 996,
+    logo: 995,
     navbar: 900,
+    headerFigure: 994,
   }
 }
