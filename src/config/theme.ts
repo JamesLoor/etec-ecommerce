@@ -11,5 +11,5 @@ export const defaultTheme = {
     logo: 995,
     navbar: 900,
     headerFigure: 994,
-  }
+  },
 }

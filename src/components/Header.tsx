@@ -10,6 +10,10 @@ import User from '../icons/User'
 import Heart from '../icons/Heart'
 import ShoppingBag from '../icons/ShoppingBag'
 
+type StyledProps = {
+  isOpen: boolean
+}
+
 const HeaderStyled = styled.header<StyledProps>`
   display: grid;
   grid-template-columns: repeat(2, min-content);
@@ -51,7 +55,7 @@ const HeaderStyled = styled.header<StyledProps>`
     position: fixed;
     width: 100%;
     height: 100vh;
-    top: ${({ isOpen }) => (isOpen ? "0" : "-100vh")};
+    top: ${({ isOpen }) => (isOpen ? '0' : '-100vh')};
     bottom: 0;
     right: 0;
     left: 0;
@@ -71,7 +75,7 @@ const HeaderStyled = styled.header<StyledProps>`
     gap: 8px;
 
     svg {
-      transition: .15s;
+      transition: 0.15s;
       :hover {
         transform: scale(1.25);
       }
@@ -133,13 +137,19 @@ const HeaderStyled = styled.header<StyledProps>`
   }
 
   @media (min-width: 1024px) {
-    grid-template-areas: "logo menu options";
+    grid-template-areas: 'logo menu options';
     grid-template-columns: 1fr max-content max-content;
     gap: 70px;
 
-    .logo { grid-area: logo; }
-    .menu { grid-area: menu; }
-    .header-options { grid-area: options; }
+    .logo {
+      grid-area: logo;
+    }
+    .menu {
+      grid-area: menu;
+    }
+    .header-options {
+      grid-area: options;
+    }
 
     .menu-open,
     .menu-close {
@@ -171,18 +181,14 @@ const HeaderStyled = styled.header<StyledProps>`
   }
 `
 
-type StyledProps = {
-  isOpen: boolean
-}
-
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
   const openMenu = () => {
-    setIsOpen(true);
+    setIsOpen(true)
   }
 
   const closeMenu = () => {
-    setIsOpen(false);
+    setIsOpen(false)
   }
 
   return (
@@ -194,7 +200,10 @@ const Header: React.FC = () => {
       <div className="figure"></div>
 
       <div className="header-options">
-        <button onClick={() => console.log('ShoppingBag')} className="menu-cart">
+        <button
+          onClick={() => console.log('ShoppingBag')}
+          className="menu-cart"
+        >
           <ShoppingBag width="25px" height="25px" />
         </button>
 
@@ -217,13 +226,13 @@ const Header: React.FC = () => {
         </button>
 
         <ul className="menu">
-          {menuData.map(item => {
+          {menuData.map((item) => {
             return (
               <li key={item.id}>
                 <NavLink
                   to={item.path}
                   onClick={closeMenu}
-                  className={({ isActive }) => (isActive ? "link__active" : "")}
+                  className={({ isActive }) => (isActive ? 'link__active' : '')}
                 >
                   {item.title}
                 </NavLink>

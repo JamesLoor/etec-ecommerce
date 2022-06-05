@@ -25,16 +25,12 @@ const HomeStyled = styled.div`
   }
 `
 
-type Props = {
-  
-}
-
-const Home: React.FC<Props> = () => {
+const Home: React.FC = () => {
   const navigate = useNavigate()
   return (
     <HomeStyled>
       <Banner image={HomeBanner} height={''}>
-       <div className="wrapper">
+        <div className="wrapper">
           <div className="banner-content">
             <h1>descubre nuestra colección</h1>
             <p>Estamos ofreciendo un 20% de descuento</p>

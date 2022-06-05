@@ -2,21 +2,21 @@ export const menuData = [
   {
     id: '001',
     path: '/',
-    title: 'Inicio'
+    title: 'Inicio',
   },
   {
     id: '002',
     path: '/nosotros',
-    title: 'Nosotros'
+    title: 'Nosotros',
   },
   {
     id: '003',
     path: '/productos',
-    title: 'Productos'
+    title: 'Productos',
   },
   {
     id: '004',
     path: '/contacto',
-    title: 'Contacto'
+    title: 'Contacto',
   },
 ]

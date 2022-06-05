@@ -43,20 +43,20 @@ h1 {
 h2 {
   font-size: 1.7em;
   margin-bottom: 35px;
-  color: #323E4D;
+  color: #323e4d;
 }
 
 h3 {
   font-size: 1.5em;
-  color: #323E4D;
+  color: #323e4d;
 }
 
 h4 {
   font-size: 1.2em;
-  color: #323E4D;
+  color: #323e4d;
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   * {
     font-size: 18px;
   }

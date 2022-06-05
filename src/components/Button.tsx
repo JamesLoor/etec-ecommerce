@@ -11,7 +11,7 @@ const ButtonStyled = styled.button`
   padding: 8px 30px;
   border-radius: 30px;
   font-weight: 500;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   :hover {
     background-color: #000;
   }
@@ -23,7 +23,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   type?: 'submit' | 'reset' | 'button'
   width?: string | number
   loading?: boolean
-  disabled?: boolean,
+  disabled?: boolean
   onClick?: () => void
 }
 
