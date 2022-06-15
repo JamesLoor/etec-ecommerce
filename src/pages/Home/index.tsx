@@ -4,6 +4,7 @@ import Banner from '../../components/Banner'
 import Button from '../../components/Button'
 import HomeBanner from '../../static/images/HomeBanner.png'
 import { useNavigate } from 'react-router-dom'
+import FeaturedProductList from '../../components/FeaturedProductList'
 import Promotion from '../../components/Promotion'
 import { promotionBanner } from '../../data/promotionBanner.data'
 import Publicity from '../../components/Publicity'
@@ -46,6 +47,11 @@ const HomeStyled = styled.div`
       }
     }
   }
+
+  .featured-products-content {
+    display: grid;
+    gap: 35px;
+  }
 `
 
 const Home: React.FC = () => {
@@ -76,6 +82,15 @@ const Home: React.FC = () => {
                 />
               )
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="featured-products">
+        <div className="wrapper">
+          <div className="featured-products-content">
+            <h2>Productos Destacados</h2>
+            <FeaturedProductList />
           </div>
         </div>
       </section>
