@@ -4,6 +4,7 @@ import Banner from '../../components/Banner'
 import Button from '../../components/Button'
 import HomeBanner from '../../static/images/HomeBanner.png'
 import { useNavigate } from 'react-router-dom'
+import FeaturedProductList from '../../components/FeaturedProductList'
 
 const HomeStyled = styled.div`
   .banner-content {
@@ -38,6 +39,14 @@ const Home: React.FC = () => {
           </div>
         </div>
       </Banner>
+      <section className="featured-products">
+        <div className="wrapper">
+          <div className="featured-products-content">
+            <h2>Productos Destacados</h2>
+            <FeaturedProductList />
+          </div>
+        </div>
+      </section>
     </HomeStyled>
   )
 }
