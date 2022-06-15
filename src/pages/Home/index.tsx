@@ -6,6 +6,8 @@ import HomeBanner from '../../static/images/HomeBanner.png'
 import { useNavigate } from 'react-router-dom'
 import Promotion from '../../components/Promotion'
 import { promotionBanner } from '../../data/promotionBanner.data'
+import Publicity from '../../components/Publicity'
+import publicityDeliveryImage from '../../static/images/publicityDelivery.png'
 
 const HomeStyled = styled.div`
   .banner-content {
@@ -75,6 +77,17 @@ const Home: React.FC = () => {
               )
             })}
           </div>
+        </div>
+      </section>
+
+      <section className="publicity">
+        <div className="wrapper">
+          <Publicity
+            title="Envios a todo el Ecuador"
+            text="35% de descuento las 10 primeras personas"
+            image={publicityDeliveryImage}
+            buttonText="Ver productos"
+          />
         </div>
       </section>
     </HomeStyled>

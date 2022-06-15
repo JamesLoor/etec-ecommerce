@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from 'styled-components'
 
 const ButtonStyled = styled.button`
-  width: min-content;
+  width: max-content;
   background-color: ${({ theme }) => theme.colors.accent};
   color: ${({ theme }) => theme.colors.secundary};
   outline: none;
