@@ -134,10 +134,12 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="wrapper">
-        <div className="new-products-content">
-          <h2>Productos Nuevos</h2>
-          <FeaturedProductList />
+      <section className="new-products">
+        <div className="wrapper">
+          <div className="new-products-content">
+            <h2>Productos Nuevos</h2>
+            <FeaturedProductList />
+          </div>
         </div>
       </section>
 
