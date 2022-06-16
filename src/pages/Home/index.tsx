@@ -9,6 +9,8 @@ import Promotion from '../../components/Promotion'
 import { promotionBanner } from '../../data/promotionBanner.data'
 import Publicity from '../../components/Publicity'
 import publicityDeliveryImage from '../../static/images/publicityDelivery.png'
+import GalleryElement from '../../components/GalleryElement'
+import { galleryElementData } from '../../data/galleryElement.data'
 
 const HomeStyled = styled.div`
   .banner-content {
@@ -48,9 +50,35 @@ const HomeStyled = styled.div`
     }
   }
 
-  .featured-products-content {
+  .featured-products-content,
+  .new-products-content {
     display: grid;
     gap: 35px;
+  }
+
+  .gallery-products-container {
+    display: grid;
+    grid-gap: 20px;
+    @media (min-width: 768px) {
+      grid-template-areas:
+        'product-1 product-1 product-2 product-5 product-5'
+        'product-3 product-4 product-4 product-5 product-5';
+      .products-1 {
+        grid-area: product-1;
+      }
+      .products-2 {
+        grid-area: product-2;
+      }
+      .products-3 {
+        grid-area: product-3;
+      }
+      .products-4 {
+        grid-area: product-4;
+      }
+      .products-5 {
+        grid-area: product-5;
+      }
+    }
   }
 `
 
@@ -103,6 +131,31 @@ const Home: React.FC = () => {
             image={publicityDeliveryImage}
             buttonText="Ver productos"
           />
+        </div>
+      </section>
+
+      <section className="wrapper">
+        <div className="new-products-content">
+          <h2>Productos Nuevos</h2>
+          <FeaturedProductList />
+        </div>
+      </section>
+
+      <section className="gallery-products">
+        <div className="wrapper">
+          <div className="gallery-products-container">
+            {galleryElementData.map((element) => {
+              return (
+                <GalleryElement
+                  key={element.id}
+                  className={element.className}
+                  name={element.name}
+                  text={element.text}
+                  background={element.background}
+                />
+              )
+            })}
+          </div>
         </div>
       </section>
     </HomeStyled>
