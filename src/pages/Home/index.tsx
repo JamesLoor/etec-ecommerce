@@ -48,7 +48,8 @@ const HomeStyled = styled.div`
     }
   }
 
-  .featured-products-content {
+  .featured-products-content,
+  .new-products-content {
     display: grid;
     gap: 35px;
   }
@@ -103,6 +104,13 @@ const Home: React.FC = () => {
             image={publicityDeliveryImage}
             buttonText="Ver productos"
           />
+        </div>
+      </section>
+
+      <section className="wrapper">
+        <div className="new-products-content">
+          <h2>Productos Nuevos</h2>
+          <FeaturedProductList />
         </div>
       </section>
     </HomeStyled>
