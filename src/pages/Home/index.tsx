@@ -141,7 +141,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section>
+      <section className="gallery-products">
         <div className="wrapper">
           <div className="gallery-products-container">
             {galleryElementData.map((element) => {
